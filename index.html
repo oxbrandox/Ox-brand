@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>Ox Brand | Multi-Tool Suite</title>
-  <!-- Google Fonts & simple reset -->
+  <title>OX BRAND | Multi-Tool Suite</title>
+  <!-- Google Fonts + modern reset -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
   <style>
     * {
@@ -15,30 +15,32 @@
 
     body {
       font-family: 'Inter', sans-serif;
-      background: #f4f9fe;
-      color: #1a2c3e;
+      background: #fff8f6;
+      color: #2c1810;
       line-height: 1.4;
       scroll-behavior: smooth;
     }
 
-    /* blue color theme variables */
+    /* Red Color Theme Variables */
     :root {
-      --primary-blue: #0a66c2;
-      --deep-blue: #0a4b8a;
-      --light-blue-bg: #eef5ff;
+      --primary-red: #e03a3a;
+      --deep-red: #b92b2b;
+      --soft-red-bg: #fff0ee;
       --card-bg: #ffffff;
-      --shadow-sm: 0 10px 20px rgba(0, 0, 0, 0.02), 0 6px 6px rgba(0, 0, 0, 0.03);
-      --shadow-hover: 0 20px 25px -12px rgba(0, 70, 150, 0.15), 0 8px 10px -6px rgba(0, 0, 0, 0.02);
+      --shadow-sm: 0 8px 20px rgba(0, 0, 0, 0.02), 0 4px 8px rgba(0, 0, 0, 0.03);
+      --shadow-hover: 0 20px 28px -12px rgba(224, 58, 58, 0.2), 0 8px 12px -6px rgba(0, 0, 0, 0.02);
       --border-radius: 1.25rem;
+      --accent-blue: #2c7da0;  /* blue accent for buttons/highlights as requested */
+      --accent-blue-dark: #1f5e7a;
     }
 
     .container {
-      max-width: 1280px;
+      max-width: 1400px;
       margin: 0 auto;
-      padding: 0 1.5rem;
+      padding: 0 1.8rem;
     }
 
-    /* header */
+    /* ========= HEADER ========= */
     .navbar {
       display: flex;
       flex-wrap: wrap;
@@ -46,13 +48,14 @@
       align-items: center;
       padding: 1.2rem 0;
       gap: 1rem;
+      border-bottom: 1px solid #ffe0d9;
     }
 
     .logo {
-      font-size: 1.6rem;
+      font-size: 1.7rem;
       font-weight: 700;
       letter-spacing: -0.3px;
-      background: linear-gradient(135deg, #0a66c2, #1e88e5);
+      background: linear-gradient(135deg, #dd2e2e, #b91c1c);
       background-clip: text;
       -webkit-background-clip: text;
       color: transparent;
@@ -61,36 +64,36 @@
     .nav-links {
       display: flex;
       gap: 2rem;
-      font-weight: 500;
+      font-weight: 600;
     }
 
     .nav-links a {
       text-decoration: none;
-      color: #1e3a5f;
+      color: #5a2e24;
       transition: color 0.2s;
     }
 
     .nav-links a:hover {
-      color: var(--primary-blue);
+      color: var(--primary-red);
     }
 
     .contact-email {
-      background: #eaf3ff;
-      padding: 0.5rem 1rem;
+      background: #ffe6e0;
+      padding: 0.5rem 1.2rem;
       border-radius: 40px;
       font-size: 0.85rem;
-      color: var(--primary-blue);
+      color: var(--primary-red);
       font-weight: 500;
     }
 
-    /* hero */
+    /* ========= HERO ========= */
     .hero {
       display: flex;
       flex-wrap: wrap;
       align-items: center;
       justify-content: space-between;
-      gap: 2rem;
-      padding: 2rem 0 2.5rem 0;
+      gap: 2.5rem;
+      padding: 3rem 0 2.5rem;
     }
 
     .hero-content {
@@ -98,34 +101,34 @@
     }
 
     .hero-content h1 {
-      font-size: 2.7rem;
-      font-weight: 700;
+      font-size: 2.8rem;
+      font-weight: 800;
       line-height: 1.2;
-      color: #0b2b3f;
+      color: #3b1e14;
       margin-bottom: 1rem;
     }
 
     .hero-content p {
       font-size: 1.1rem;
-      color: #2c4c6e;
-      margin-bottom: 1.8rem;
+      color: #6e3f2f;
+      margin-bottom: 2rem;
       max-width: 90%;
     }
 
     .cta-btn {
       display: inline-block;
-      background: var(--primary-blue);
+      background: var(--primary-red);
       color: white;
-      font-weight: 600;
-      padding: 0.9rem 2rem;
+      font-weight: 700;
+      padding: 0.9rem 2.2rem;
       border-radius: 60px;
       text-decoration: none;
-      box-shadow: 0 4px 8px rgba(10,102,194,0.2);
+      box-shadow: 0 6px 14px rgba(224, 58, 58, 0.25);
       transition: all 0.2s ease;
     }
 
     .cta-btn:hover {
-      background: #0a5bb3;
+      background: var(--deep-red);
       transform: translateY(-2px);
     }
 
@@ -135,29 +138,30 @@
       flex-wrap: wrap;
       justify-content: center;
       gap: 1rem;
-      background: rgba(10,102,194,0.03);
+      background: rgba(224, 58, 58, 0.03);
       padding: 1.5rem;
-      border-radius: 2rem;
+      border-radius: 2.5rem;
     }
 
     .icon-badge {
       background: white;
-      padding: 0.75rem;
-      border-radius: 1rem;
+      padding: 0.8rem;
+      border-radius: 1.2rem;
       box-shadow: var(--shadow-sm);
-      font-size: 1.8rem;
-      width: 70px;
+      font-size: 1.9rem;
+      width: 75px;
       text-align: center;
+      transition: transform 0.2s;
     }
 
-    /* search bar */
+    /* ========= SEARCH ========= */
     .search-section {
-      margin: 1.2rem 0 2.5rem 0;
+      margin: 1rem 0 2.8rem 0;
     }
 
     .search-wrapper {
       position: relative;
-      max-width: 700px;
+      max-width: 720px;
       margin: 0 auto;
     }
 
@@ -165,7 +169,7 @@
       width: 100%;
       padding: 1rem 1.5rem;
       font-size: 1rem;
-      border: 1px solid #dce7f2;
+      border: 1px solid #ffcdc2;
       border-radius: 60px;
       background: white;
       box-shadow: var(--shadow-sm);
@@ -175,45 +179,47 @@
 
     .search-input:focus {
       outline: none;
-      border-color: var(--primary-blue);
-      box-shadow: 0 0 0 3px rgba(10,102,194,0.2);
+      border-color: var(--primary-red);
+      box-shadow: 0 0 0 3px rgba(224, 58, 58, 0.2);
     }
 
-    /* sections */
+    /* ========= TOOLS SECTIONS ========= */
     .tools-section {
-      margin-bottom: 3.5rem;
+      margin-bottom: 4rem;
     }
 
     .section-head {
-      margin-bottom: 1.5rem;
+      margin-bottom: 1.8rem;
     }
 
     .section-head h2 {
-      font-size: 1.8rem;
-      font-weight: 600;
+      font-size: 1.9rem;
+      font-weight: 700;
       display: inline-flex;
       align-items: center;
-      gap: 0.5rem;
+      gap: 0.6rem;
+      color: #3b1e14;
     }
 
     .section-head p {
-      color: #4a627a;
+      color: #a5533b;
       margin-top: 0.3rem;
+      font-size: 0.95rem;
     }
 
     .tools-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-      gap: 1.5rem;
+      grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+      gap: 1.6rem;
     }
 
     .tool-card {
       background: var(--card-bg);
       border-radius: var(--border-radius);
-      padding: 1.2rem 1.2rem 1.5rem 1.2rem;
+      padding: 1.3rem 1.2rem 1.5rem 1.2rem;
       box-shadow: var(--shadow-sm);
       transition: all 0.25s ease;
-      border: 1px solid rgba(10,102,194,0.08);
+      border: 1px solid rgba(224, 58, 58, 0.1);
       display: flex;
       flex-direction: column;
     }
@@ -221,36 +227,37 @@
     .tool-card:hover {
       transform: translateY(-5px);
       box-shadow: var(--shadow-hover);
-      border-color: rgba(10,102,194,0.2);
+      border-color: rgba(224, 58, 58, 0.3);
     }
 
     .tool-icon {
-      font-size: 2rem;
+      font-size: 2.2rem;
       margin-bottom: 0.8rem;
     }
 
     .tool-name {
       font-size: 1.2rem;
-      font-weight: 600;
-      margin-bottom: 0.4rem;
-      color: #0f3b60;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      color: #4a261b;
     }
 
     .tool-desc {
       font-size: 0.85rem;
-      color: #4f6f8f;
-      margin-bottom: 1rem;
+      color: #7a4c3a;
+      margin-bottom: 1.2rem;
       line-height: 1.4;
       flex: 1;
     }
 
+    /* BLUE-ACCENTED BUTTONS as requested */
     .use-btn {
       background: transparent;
-      border: 1.5px solid var(--primary-blue);
-      color: var(--primary-blue);
+      border: 1.5px solid var(--accent-blue);
+      color: var(--accent-blue);
       padding: 0.5rem 1rem;
       border-radius: 40px;
-      font-weight: 600;
+      font-weight: 700;
       font-size: 0.85rem;
       cursor: pointer;
       transition: 0.2s;
@@ -262,15 +269,21 @@
     }
 
     .use-btn:hover {
-      background: var(--primary-blue);
+      background: var(--accent-blue);
       color: white;
-      border-color: var(--primary-blue);
+      border-color: var(--accent-blue);
     }
 
-    /* footer */
+    /* Special label crop cards (Flipkart & Meesho) */
+    .special-card {
+      background: linear-gradient(145deg, #fff9f7, #fff2ee);
+      border-left: 4px solid var(--primary-red);
+    }
+
+    /* ========= FOOTER ========= */
     .footer {
       background: #ffffff;
-      border-top: 1px solid #e2edf7;
+      border-top: 1px solid #ffe0d9;
       margin-top: 4rem;
       padding: 2rem 0 2rem 0;
     }
@@ -285,38 +298,38 @@
 
     .footer-logo h3 {
       font-size: 1.4rem;
-      font-weight: 700;
-      color: #0a66c2;
+      font-weight: 800;
+      color: var(--primary-red);
     }
 
     .footer-logo p {
       font-size: 0.8rem;
-      color: #5c6f87;
+      color: #885f4b;
     }
 
     .footer-email a, .footer-links a {
       text-decoration: none;
-      color: #1e3a5f;
+      color: #5a2e24;
       font-size: 0.9rem;
+      font-weight: 500;
+    }
+
+    .footer-email a:hover, .footer-links a:hover {
+      color: var(--primary-red);
     }
 
     .footer-links {
       display: flex;
-      gap: 1.5rem;
+      gap: 1.8rem;
     }
 
-    hr {
-      margin: 1rem 0;
-      border-color: #e9f0f5;
-    }
-
-    /* No phone display */
-    .no-phone {
-      display: inline;
+    /* hidden helper */
+    .hidden-card {
+      display: none !important;
     }
 
     /* responsive */
-    @media (max-width: 768px) {
+    @media (max-width: 800px) {
       .container {
         padding: 0 1.2rem;
       }
@@ -326,23 +339,19 @@
       }
       .nav-links {
         flex-wrap: wrap;
-        gap: 1.2rem;
+        gap: 1.5rem;
       }
       .hero-content h1 {
-        font-size: 2rem;
+        font-size: 2.2rem;
       }
       .hero-content p {
         max-width: 100%;
       }
       .hero-icons {
         width: 100%;
-        order: 2;
-      }
-      .hero {
-        flex-direction: column;
       }
       .tools-grid {
-        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
       }
       .footer-inner {
         flex-direction: column;
@@ -352,24 +361,16 @@
 
     @media (max-width: 480px) {
       .section-head h2 {
-        font-size: 1.5rem;
+        font-size: 1.6rem;
       }
       .tool-card {
         padding: 1rem;
       }
     }
 
-    .hidden-card {
-      display: none;
-    }
-
-    .highlight {
-      background: #fff1c1;
-    }
-
-    button, .use-btn {
-      background: none;
-      font-family: inherit;
+    .highlight-search {
+      background-color: #ffded5;
+      transition: 0.1s;
     }
   </style>
 </head>
@@ -379,7 +380,7 @@
   <!-- Top Header -->
   <header>
     <div class="navbar">
-      <div class="logo">Tools Wonder</div>
+      <div class="logo">OX BRAND</div>
       <div class="nav-links">
         <a href="#">Home</a>
         <a href="#">Tools</a>
@@ -401,33 +402,29 @@
     <div class="hero-icons">
       <div class="icon-badge">🖼️</div>
       <div class="icon-badge">📄</div>
+      <div class="icon-badge">💻</div>
+      <div class="icon-badge">🎬</div>
       <div class="icon-badge">🔢</div>
       <div class="icon-badge">🔤</div>
-      <div class="icon-badge">🌐</div>
-      <div class="icon-badge">🎨</div>
-      <div class="icon-badge">📊</div>
-      <div class="icon-badge">🛠️</div>
     </div>
   </section>
 
-  <!-- Search Bar -->
+  <!-- Live Search Bar -->
   <div class="search-section">
     <div class="search-wrapper">
       <input type="text" id="liveSearchInput" class="search-input" placeholder="Search a tool…" autocomplete="off">
     </div>
   </div>
 
-  <!-- Dynamic Tools Sections -->
-  <main id="toolsMain">
-    <!-- all sections will be generated with JS -->
-  </main>
+  <!-- Dynamic Tools Container -->
+  <main id="toolsMain"></main>
 </div>
 
 <!-- Footer -->
 <footer class="footer">
   <div class="container footer-inner">
     <div class="footer-logo">
-      <h3>Tools Wonder</h3>
+      <h3>OX BRAND</h3>
       <p>Simplifying your digital life.</p>
     </div>
     <div class="footer-email">
@@ -441,134 +438,158 @@
 </footer>
 
 <script>
-  // DATA: All tools with categories, icons, descriptions
-  const toolsData = [
-    // Image Tools
-    { category: "🖼 Image Tools", sub: "Optimize, transform, and edit images instantly", name: "Image Converter", desc: "Convert between JPG, PNG, WEBP and more.", icon: "🖼️" },
-    { category: "🖼 Image Tools", sub: "Optimize, transform, and edit images instantly", name: "Image Compressor", desc: "Reduce image size without quality loss.", icon: "🗜️" },
-    { category: "🖼 Image Tools", sub: "Optimize, transform, and edit images instantly", name: "Image Resizer", desc: "Resize images for any platform.", icon: "📐" },
-    { category: "🖼 Image Tools", sub: "Optimize, transform, and edit images instantly", name: "Image Cropper", desc: "Crop precisely to any dimension.", icon: "✂️" },
-    { category: "🖼 Image Tools", sub: "Optimize, transform, and edit images instantly", name: "Image to Text (OCR)", desc: "Extract text from scanned images.", icon: "🔤" },
-    { category: "🖼 Image Tools", sub: "Optimize, transform, and edit images instantly", name: "Image Rotator/Flipper", desc: "Rotate, flip or mirror images.", icon: "🔄" },
+  // ---------- MASTER TOOLS DATASET ----------
+  const toolsCatalog = [
+    // **** SPECIAL CROPPING TOOLS (Flipkart, Meesho) ****
+    { category: "🖼 E‑commerce Label Tools", sub: "Optimized cropping for marketplaces", name: "Flipkart Label Crop", desc: "Upload & auto-crop Flipkart shipping labels. Choose file to crop.", icon: "🏷️", special: true, acceptFile: true },
+    { category: "🖼 E‑commerce Label Tools", sub: "Optimized cropping for marketplaces", name: "Meesho Label Crop", desc: "Crop Meesho labels perfectly. Click to select image.", icon: "📦", special: true, acceptFile: true },
+    // Standard Image Tools
+    { category: "🖼 Image Tools", sub: "Convert, compress & transform visuals", name: "Image Converter", desc: "Convert between JPG, PNG, WEBP, HEIC.", icon: "🖼️" },
+    { category: "🖼 Image Tools", sub: "Convert, compress & transform visuals", name: "Image Compressor", desc: "Reduce file size without quality loss.", icon: "🗜️" },
+    { category: "🖼 Image Tools", sub: "Convert, compress & transform visuals", name: "Image Resizer", desc: "Resize images for social or web.", icon: "📐" },
+    { category: "🖼 Image Tools", sub: "Convert, compress & transform visuals", name: "Image Cropper", desc: "Crop to exact aspect ratio.", icon: "✂️" },
+    { category: "🖼 Image Tools", sub: "Convert, compress & transform visuals", name: "Image to Text (OCR)", desc: "Extract text from images & scanned docs.", icon: "🔤" },
+    { category: "🖼 Image Tools", sub: "Convert, compress & transform visuals", name: "Image Rotator/Flipper", desc: "Rotate, flip or mirror images instantly.", icon: "🔄" },
     // Document Tools
-    { category: "📄 Document Tools", sub: "PDF editing, conversion and eSign solutions", name: "PDF to Word / Word to PDF", desc: "Seamless conversion between PDF & Word.", icon: "📑" },
-    { category: "📄 Document Tools", sub: "PDF editing, conversion and eSign solutions", name: "PDF Compressor", desc: "Reduce PDF size while preserving quality.", icon: "🗜️" },
-    { category: "📄 Document Tools", sub: "PDF editing, conversion and eSign solutions", name: "PDF Merger & Splitter", desc: "Combine or split PDF pages easily.", icon: "🔗" },
-    { category: "📄 Document Tools", sub: "PDF editing, conversion and eSign solutions", name: "Document Converter", desc: "Convert DOC, ODT, TXT and more.", icon: "📄" },
-    { category: "📄 Document Tools", sub: "PDF editing, conversion and eSign solutions", name: "PDF Lock/Unlock", desc: "Add or remove PDF passwords.", icon: "🔒" },
-    { category: "📄 Document Tools", sub: "PDF editing, conversion and eSign solutions", name: "eSign PDF", desc: "Electronically sign any document.", icon: "✍️" },
+    { category: "📄 Document Tools", sub: "PDF, Word & eSign solutions", name: "PDF to Word / Word to PDF", desc: "Two-way conversion with high fidelity.", icon: "📑" },
+    { category: "📄 Document Tools", sub: "PDF, Word & eSign solutions", name: "PDF Compressor", desc: "Shrink PDF size while preserving quality.", icon: "🗜️" },
+    { category: "📄 Document Tools", sub: "PDF, Word & eSign solutions", name: "PDF Merger & Splitter", desc: "Combine or split PDF pages.", icon: "🔗" },
+    { category: "📄 Document Tools", sub: "PDF, Word & eSign solutions", name: "Document Converter", desc: "Convert DOC, ODT, TXT, RTF.", icon: "📄" },
+    { category: "📄 Document Tools", sub: "PDF, Word & eSign solutions", name: "PDF Lock/Unlock", desc: "Add or remove PDF passwords.", icon: "🔒" },
+    { category: "📄 Document Tools", sub: "PDF, Word & eSign solutions", name: "eSign PDF", desc: "Sign documents digitally with ease.", icon: "✍️" },
     // Calculator Tools
-    { category: "🧮 Calculator Tools", sub: "Smart calculators for everyday math", name: "Scientific Calculator", desc: "Advanced functions & equations.", icon: "🔬" },
-    { category: "🧮 Calculator Tools", sub: "Smart calculators for everyday math", name: "Age Calculator", desc: "Calculate exact age from DOB.", icon: "🎂" },
-    { category: "🧮 Calculator Tools", sub: "Smart calculators for everyday math", name: "BMI Calculator", desc: "Check body mass index health.", icon: "⚖️" },
-    { category: "🧮 Calculator Tools", sub: "Smart calculators for everyday math", name: "Loan EMI Calculator", desc: "Monthly EMI & interest breakdown.", icon: "🏦" },
-    { category: "🧮 Calculator Tools", sub: "Smart calculators for everyday math", name: "GST Calculator", desc: "Calculate tax inclusive/exclusive.", icon: "📊" },
-    { category: "🧮 Calculator Tools", sub: "Smart calculators for everyday math", name: "Currency Converter", desc: "Live exchange rates.", icon: "💱" },
+    { category: "🧮 Calculator Tools", sub: "Smart calculations for daily needs", name: "Scientific Calculator", desc: "Trig, log, exponent functions.", icon: "🔬" },
+    { category: "🧮 Calculator Tools", sub: "Smart calculations for daily needs", name: "Age Calculator", desc: "Calculate exact age from DOB.", icon: "🎂" },
+    { category: "🧮 Calculator Tools", sub: "Smart calculations for daily needs", name: "BMI Calculator", desc: "Body mass index health checker.", icon: "⚖️" },
+    { category: "🧮 Calculator Tools", sub: "Smart calculations for daily needs", name: "Loan EMI Calculator", desc: "Monthly EMI & interest breakdown.", icon: "🏦" },
+    { category: "🧮 Calculator Tools", sub: "Smart calculations for daily needs", name: "GST Calculator", desc: "Compute GST inclusive/exclusive.", icon: "📊" },
+    { category: "🧮 Calculator Tools", sub: "Smart calculations for daily needs", name: "Currency Converter", desc: "Live exchange rates.", icon: "💱" },
     // Text Tools
-    { category: "🔤 Text Tools", sub: "Manipulate, analyze and secure text", name: "Text Case Converter", desc: "UPPER, lower, Title Case & more.", icon: "🅰️" },
-    { category: "🔤 Text Tools", sub: "Manipulate, analyze and secure text", name: "Word & Character Counter", desc: "Count words, characters, sentences.", icon: "🔢" },
-    { category: "🔤 Text Tools", sub: "Manipulate, analyze and secure text", name: "Remove Duplicate Lines", desc: "Clean up repeated lines.", icon: "🧹" },
-    { category: "🔤 Text Tools", sub: "Manipulate, analyze and secure text", name: "Text Sorter", desc: "Sort lines alphabetically or reverse.", icon: "🔠" },
-    { category: "🔤 Text Tools", sub: "Manipulate, analyze and secure text", name: "Text Reverser", desc: "Reverse entire string or words.", icon: "↩️" },
-    { category: "🔤 Text Tools", sub: "Manipulate, analyze and secure text", name: "Text Encryptor/Decryptor", desc: "AES / base64 style encryption.", icon: "🔐" },
-    // Web/Developer Tools
-    { category: "🌐 Web/Developer Tools", sub: "Code optimization, validators & dev utilities", name: "HTML/CSS/JS Minifier", desc: "Minify code for faster websites.", icon: "⚡" },
-    { category: "🌐 Web/Developer Tools", sub: "Code optimization, validators & dev utilities", name: "JSON Formatter & Validator", desc: "Pretty print and validate JSON.", icon: "{}" },
-    { category: "🌐 Web/Developer Tools", sub: "Code optimization, validators & dev utilities", name: "Base64 Encoder/Decoder", desc: "Encode/Decode base64 strings.", icon: "🔄" },
-    { category: "🌐 Web/Developer Tools", sub: "Code optimization, validators & dev utilities", name: "URL Encoder/Decoder", desc: "Encode URLs for safe transmission.", icon: "🌍" },
-    { category: "🌐 Web/Developer Tools", sub: "Code optimization, validators & dev utilities", name: "Color Picker & Converter", desc: "Pick colors, HEX to RGB etc.", icon: "🎨" },
-    { category: "🌐 Web/Developer Tools", sub: "Code optimization, validators & dev utilities", name: "Regex Tester", desc: "Test regular expressions live.", icon: "⚙️" },
+    { category: "🔤 Text Tools", sub: "Manipulate, analyze & secure text", name: "Text Case Converter", desc: "UPPER, lower, Title Case, Sentence case.", icon: "🅰️" },
+    { category: "🔤 Text Tools", sub: "Manipulate, analyze & secure text", name: "Word & Character Counter", desc: "Count words, characters, sentences.", icon: "🔢" },
+    { category: "🔤 Text Tools", sub: "Manipulate, analyze & secure text", name: "Remove Duplicate Lines", desc: "Clean repeated lines from text.", icon: "🧹" },
+    { category: "🔤 Text Tools", sub: "Manipulate, analyze & secure text", name: "Text Sorter", desc: "Sort lines A-Z or Z-A.", icon: "🔠" },
+    { category: "🔤 Text Tools", sub: "Manipulate, analyze & secure text", name: "Text Reverser", desc: "Reverse string or word order.", icon: "↩️" },
+    { category: "🔤 Text Tools", sub: "Manipulate, analyze & secure text", name: "Text Encryptor/Decryptor", desc: "AES & base64 style encryption.", icon: "🔐" },
+    // Web/Dev Tools
+    { category: "🌐 Web/Developer Tools", sub: "Code utilities & validators", name: "HTML/CSS/JS Minifier", desc: "Minify code for faster websites.", icon: "⚡" },
+    { category: "🌐 Web/Developer Tools", sub: "Code utilities & validators", name: "JSON Formatter & Validator", desc: "Prettify and validate JSON.", icon: "{}" },
+    { category: "🌐 Web/Developer Tools", sub: "Code utilities & validators", name: "Base64 Encoder/Decoder", desc: "Convert text to/from Base64.", icon: "🔄" },
+    { category: "🌐 Web/Developer Tools", sub: "Code utilities & validators", name: "URL Encoder/Decoder", desc: "Encode URLs safely.", icon: "🌍" },
+    { category: "🌐 Web/Developer Tools", sub: "Code utilities & validators", name: "Color Picker & Converter", desc: "Pick colors, HEX to RGB.", icon: "🎨" },
+    { category: "🌐 Web/Developer Tools", sub: "Code utilities & validators", name: "Regex Tester", desc: "Test regular expressions live.", icon: "⚙️" },
     // Color Tools
-    { category: "🎨 Color Tools", sub: "Design with confidence: palettes & accessibility", name: "Color Picker from Image", desc: "Extract color palette from any image.", icon: "🖌️" },
-    { category: "🎨 Color Tools", sub: "Design with confidence: palettes & accessibility", name: "HEX to RGB Converter", desc: "Convert between hex and RGB.", icon: "🌈" },
-    { category: "🎨 Color Tools", sub: "Design with confidence: palettes & accessibility", name: "Gradient Generator", desc: "Create smooth CSS gradients.", icon: "🎨" },
-    { category: "🎨 Color Tools", sub: "Design with confidence: palettes & accessibility", name: "Contrast Checker", desc: "Check WCAG contrast ratio.", icon: "👁️" },
-    { category: "🎨 Color Tools", sub: "Design with confidence: palettes & accessibility", name: "Palette Generator", desc: "Generate 5-color harmonious sets.", icon: "🎨" },
-    { category: "🎨 Color Tools", sub: "Design with confidence: palettes & accessibility", name: "Color Blindness Simulator", desc: "Preview colors for colorblindness.", icon: "👓" },
-    // SEO & Marketing Tools
-    { category: "🌍 SEO & Marketing Tools", sub: "Boost rankings and analyze content", name: "Keyword Density Checker", desc: "Check keyword frequency in text.", icon: "🔍" },
-    { category: "🌍 SEO & Marketing Tools", sub: "Boost rankings and analyze content", name: "Meta Tag Analyzer", desc: "Analyze meta tags for SEO.", icon: "📝" },
-    { category: "🌍 SEO & Marketing Tools", sub: "Boost rankings and analyze content", name: "Word Counter", desc: "SEO friendly word counter.", icon: "📊" },
+    { category: "🎨 Color Tools", sub: "Palettes, contrast & conversion", name: "Color Picker from Image", desc: "Extract colors from uploaded image.", icon: "🖌️" },
+    { category: "🎨 Color Tools", sub: "Palettes, contrast & conversion", name: "HEX to RGB Converter", desc: "Convert hex to RGB / RGBA.", icon: "🌈" },
+    { category: "🎨 Color Tools", sub: "Palettes, contrast & conversion", name: "Gradient Generator", desc: "Create CSS gradients.", icon: "🎨" },
+    { category: "🎨 Color Tools", sub: "Palettes, contrast & conversion", name: "Contrast Checker", desc: "WCAG accessibility contrast.", icon: "👁️" },
+    { category: "🎨 Color Tools", sub: "Palettes, contrast & conversion", name: "Palette Generator", desc: "Generate harmonious 5-color sets.", icon: "🎨" },
+    { category: "🎨 Color Tools", sub: "Palettes, contrast & conversion", name: "Color Blindness Simulator", desc: "Preview for color blindness types.", icon: "👓" },
+    // SEO & Marketing
+    { category: "🌍 SEO & Marketing Tools", sub: "Optimize content & meta", name: "Keyword Density Checker", desc: "Analyze keyword frequency.", icon: "🔍" },
+    { category: "🌍 SEO & Marketing Tools", sub: "Optimize content & meta", name: "Meta Tag Analyzer", desc: "Review meta tags for SEO.", icon: "📝" },
+    { category: "🌍 SEO & Marketing Tools", sub: "Optimize content & meta", name: "Word Counter", desc: "SEO word & character counter.", icon: "📊" },
     // Utility Tools
-    { category: "🛠️ Utility Tools", sub: "Handy everyday generators & converters", name: "QR Code Generator & Scanner", desc: "Create and scan QR codes.", icon: "📱" },
-    { category: "🛠️ Utility Tools", sub: "Handy everyday generators & converters", name: "Barcode Generator", desc: "Generate EAN/UPC barcodes.", icon: "📦" },
-    { category: "🛠️ Utility Tools", sub: "Handy everyday generators & converters", name: "UUID Generator", desc: "Generate unique UUID v4.", icon: "🆔" },
-    { category: "🛠️ Utility Tools", sub: "Handy everyday generators & converters", name: "Unit Converter", desc: "Length, mass, volume, temperature.", icon: "📏" },
-    { category: "🛠️ Utility Tools", sub: "Handy everyday generators & converters", name: "Time Zone Converter", desc: "Convert time zones worldwide.", icon: "⏰" },
-    { category: "🛠️ Utility Tools", sub: "Handy everyday generators & converters", name: "Random Number/Password Generator", desc: "Secure passwords & random numbers.", icon: "🎲" }
+    { category: "🛠️ Utility Tools", sub: "Generators, converters & more", name: "QR Code Generator & Scanner", desc: "Create / decode QR codes.", icon: "📱" },
+    { category: "🛠️ Utility Tools", sub: "Generators, converters & more", name: "Barcode Generator", desc: "Generate EAN-13 / UPC codes.", icon: "📦" },
+    { category: "🛠️ Utility Tools", sub: "Generators, converters & more", name: "UUID Generator", desc: "Generate version 4 UUIDs.", icon: "🆔" },
+    { category: "🛠️ Utility Tools", sub: "Generators, converters & more", name: "Unit Converter", desc: "Length, weight, volume, temperature.", icon: "📏" },
+    { category: "🛠️ Utility Tools", sub: "Generators, converters & more", name: "Time Zone Converter", desc: "World clock & time conversion.", icon: "⏰" },
+    { category: "🛠️ Utility Tools", sub: "Generators, converters & more", name: "Random Number/Password Generator", desc: "Secure passwords & random numbers.", icon: "🎲" }
   ];
 
-  // Group tools by category preserving order
+  // Group helper
   function groupByCategory(data) {
-    const orderedCategories = ["🖼 Image Tools","📄 Document Tools","🧮 Calculator Tools","🔤 Text Tools","🌐 Web/Developer Tools","🎨 Color Tools","🌍 SEO & Marketing Tools","🛠️ Utility Tools"];
-    const groups = new Map();
+    const order = ["🖼 E‑commerce Label Tools","🖼 Image Tools","📄 Document Tools","🧮 Calculator Tools","🔤 Text Tools","🌐 Web/Developer Tools","🎨 Color Tools","🌍 SEO & Marketing Tools","🛠️ Utility Tools"];
+    const map = new Map();
     data.forEach(tool => {
-      if (!groups.has(tool.category)) groups.set(tool.category, { sub: tool.sub, tools: [] });
-      groups.get(tool.category).tools.push(tool);
+      if (!map.has(tool.category)) map.set(tool.category, { sub: tool.sub, tools: [] });
+      map.get(tool.category).tools.push(tool);
     });
-    // sort categories according to orderedCategories
-    const sorted = [];
-    for (let cat of orderedCategories) {
-      if (groups.has(cat)) sorted.push({ category: cat, sub: groups.get(cat).sub, tools: groups.get(cat).tools });
+    const grouped = [];
+    for (let cat of order) {
+      if (map.has(cat)) grouped.push({ category: cat, sub: map.get(cat).sub, tools: map.get(cat).tools });
     }
-    // add any leftover (just safety)
-    for (let [cat, val] of groups.entries()) {
-      if (!orderedCategories.includes(cat)) sorted.push({ category: cat, sub: val.sub, tools: val.tools });
+    for (let [cat, val] of map.entries()) {
+      if (!order.includes(cat)) grouped.push({ category: cat, sub: val.sub, tools: val.tools });
     }
-    return sorted;
+    return grouped;
   }
 
-  let groupedSections = groupByCategory(toolsData);
-  let renderedSections = [];
+  let groupedData = groupByCategory(toolsCatalog);
+  let currentFilter = "";
 
-  function renderTools(filterText = "") {
-    const mainContainer = document.getElementById("toolsMain");
-    if (!mainContainer) return;
-    const lowerFilter = filterText.trim().toLowerCase();
-    // For each category, filter tools, and decide to show category if any tool matches
+  // file picker handlers for special crop tools
+  function handleFileCrop(toolName) {
+    const input = document.createElement('input');
+    input.type = 'file';
+    input.accept = 'image/*';
+    input.onchange = (e) => {
+      const file = e.target.files[0];
+      if (file) {
+        alert(`✨ ${toolName}: Selected "${file.name}". Cropping simulation ready (full feature coming soon).`);
+      } else {
+        alert("No file selected.");
+      }
+    };
+    input.click();
+  }
+
+  function renderTools() {
+    const container = document.getElementById("toolsMain");
+    if (!container) return;
+    const filterLower = currentFilter.trim().toLowerCase();
     let html = '';
-    for (let section of groupedSections) {
-      const filteredTools = section.tools.filter(tool => 
-        lowerFilter === "" || tool.name.toLowerCase().includes(lowerFilter) || tool.desc.toLowerCase().includes(lowerFilter)
+
+    for (let section of groupedData) {
+      let filteredTools = section.tools.filter(tool =>
+        filterLower === "" || tool.name.toLowerCase().includes(filterLower) || tool.desc.toLowerCase().includes(filterLower)
       );
       if (filteredTools.length === 0) continue;
+
       html += `
-        <div class="tools-section">
+        <div class="tools-section" data-section="${section.category.replace(/\s/g, '')}">
           <div class="section-head">
             <h2>${section.category}</h2>
-            <p>${section.sub || "Essential tools at your fingertips"}</p>
+            <p>${section.sub}</p>
           </div>
-          <div class="tools-grid" data-category="${section.category}">
+          <div class="tools-grid">
       `;
       filteredTools.forEach(tool => {
-        // simple dynamic icon fallback
-        const toolIcon = tool.icon || "🛠️";
+        const isSpecial = tool.special === true;
+        const extraClass = isSpecial ? 'special-card' : '';
         html += `
-          <div class="tool-card" data-toolname="${tool.name.toLowerCase()}">
-            <div class="tool-icon">${toolIcon}</div>
+          <div class="tool-card ${extraClass}" data-toolname="${tool.name.toLowerCase()}">
+            <div class="tool-icon">${tool.icon}</div>
             <div class="tool-name">${escapeHtml(tool.name)}</div>
             <div class="tool-desc">${escapeHtml(tool.desc)}</div>
-            <a href="#" class="use-btn" data-tool="${escapeHtml(tool.name)}">Use Tool →</a>
+            <button class="use-btn" data-tool='${escapeHtml(tool.name)}' data-special="${isSpecial ? 'true' : 'false'}">Use Tool →</button>
           </div>
         `;
       });
       html += `</div></div>`;
     }
+
     if (html === "") {
-      html = `<div style="text-align:center; padding: 3rem; background:white; border-radius:2rem;"><p>🔍 No tools match your search. Try another keyword!</p></div>`;
+      html = `<div style="text-align:center; padding: 3rem; background:#fff6f2; border-radius:2rem; margin:1rem 0;"><p style="color:#b95a3a;">🔍 No tools match “${escapeHtml(currentFilter)}”. Try another keyword.</p></div>`;
     }
-    mainContainer.innerHTML = html;
-    // attach click listeners to all "Use Tool" links (prevent default and show placeholder)
+    container.innerHTML = html;
+
+    // attach event listeners to all "Use Tool" buttons
     document.querySelectorAll('.use-btn').forEach(btn => {
       btn.addEventListener('click', (e) => {
         e.preventDefault();
-        const toolName = btn.getAttribute('data-tool') || 'Tool';
-        alert(`✨ "${toolName}" is ready to use! (placeholder link — full functionality coming soon)`);
+        const toolName = btn.getAttribute('data-tool');
+        const isSpecial = btn.getAttribute('data-special') === 'true';
+        if (isSpecial && (toolName.includes("Flipkart") || toolName.includes("Meesho"))) {
+          handleFileCrop(toolName);
+        } else {
+          alert(`🔧 "${toolName}" is ready! (placeholder — full interactive tool coming soon)`);
+        }
       });
     });
   }
 
-  // simple escape helper
   function escapeHtml(str) {
     return str.replace(/[&<>]/g, function(m) {
       if (m === '&') return '&amp;';
@@ -578,42 +599,31 @@
     });
   }
 
-  // search live filter
-  function initSearch() {
-    const searchInput = document.getElementById('liveSearchInput');
-    if (searchInput) {
-      searchInput.addEventListener('input', (e) => {
-        renderTools(e.target.value);
-      });
-    }
+  // Live search filter
+  const searchInput = document.getElementById('liveSearchInput');
+  if (searchInput) {
+    searchInput.addEventListener('input', (e) => {
+      currentFilter = e.target.value;
+      renderTools();
+    });
   }
 
-  // "Explore Tools" smooth scroll to first tools section
-  function initCta() {
-    const exploreBtn = document.getElementById('exploreBtn');
-    if (exploreBtn) {
-      exploreBtn.addEventListener('click', (e) => {
-        e.preventDefault();
-        const firstSection = document.querySelector('.tools-section');
-        if (firstSection) {
-          firstSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        } else {
-          window.scrollTo({ top: 600, behavior: 'smooth' });
-        }
-      });
-    }
+  // explore CTA smooth scroll
+  const exploreBtn = document.getElementById('exploreBtn');
+  if (exploreBtn) {
+    exploreBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      const firstToolSection = document.querySelector('.tools-section');
+      if (firstToolSection) {
+        firstToolSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      } else {
+        window.scrollTo({ top: 700, behavior: 'smooth' });
+      }
+    });
   }
 
-  // footer email display, no phone anywhere
-  function ensureNoPhone() {
-    // just a sanity: remove any hidden phone text. All good.
-  }
-
-  // initial rendering
+  // initial render
   renderTools();
-  initSearch();
-  initCta();
-  ensureNoPhone();
 </script>
 </body>
 </html>
