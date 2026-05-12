@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Flipkart Label Tool</title>
+<title>Meesho Label Tool</title>
 
 <style>
     body{
@@ -29,6 +29,7 @@
     .logo{
         width:60px;
         height:60px;
+        object-fit:contain;
     }
 
     .upload-box{
@@ -42,7 +43,6 @@
         margin-top:18px;
         display:flex;
         gap:25px;
-        font-size:28px;
     }
 
     .radio-group label{
@@ -59,7 +59,7 @@
     button{
         margin-top:20px;
         padding:12px 20px;
-        background:#2874f0;
+        background:#f43397;
         color:#fff;
         border:none;
         cursor:pointer;
@@ -79,7 +79,7 @@
 <div class="tool-box">
 
     <div class="top-row">
-        <img class="logo" src="https://img1a.flixcart.com/www/linchpin/fk-cp-zion/img/fk-logo_f64bb3.png">
+        <img class="logo" src="https://upload.wikimedia.org/wikipedia/commons/3/33/Meesho_logo.png">
 
         <div class="upload-box">
             <input type="file" id="fileInput" accept="image/*">
@@ -152,12 +152,10 @@ fileInput.addEventListener("change", function () {
 downloadBtn.addEventListener("click", function(){
     const link = document.createElement("a");
     link.href = finalImage;
-    link.download = "flipkart-label.png";
+    link.download = "meesho-label.png";
     link.click();
 });
 </script>
 
 </body>
-</html>
-
 </html>
