@@ -609,52 +609,6 @@
     </section>
     
     <!-- Image Tools Section -->
-    export default function EcommerceToolCards() {
-  const tools = [
-    {
-      name: 'Product Image Optimizer',
-      description: 'Resize and optimize product images for marketplaces',
-      icon: '🖼️',
-      link: 'image-optimizer.html'
-    },
-    {
-      name: 'Order Label Generator',
-      description: 'Generate shipping and courier labels instantly',
-      icon: '📦',
-      link: 'label-generator.html'
-    },
-    {
-      name: 'Bulk Product Upload',
-      description: 'Upload products in bulk for your store catalog',
-      icon: '🛒',
-      link: 'bulk-upload.html'
-    }
-  ];
-
-  return (
-    <div className="min-h-screen bg-slate-950 flex items-center justify-center p-8">
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl w-full">
-        {tools.map((tool, index) => (
-          <div
-            key={index}
-            className="bg-white rounded-2xl shadow-xl p-6 hover:scale-105 transition-all duration-300 border border-slate-200"
-          >
-            <div className="text-4xl mb-4">{tool.icon}</div>
-            <h3 className="text-xl font-bold text-slate-800 mb-2">{tool.name}</h3>
-            <p className="text-slate-600 mb-5">{tool.description}</p>
-            <a
-              href={tool.link}
-              className="inline-block bg-slate-900 text-white px-5 py-2 rounded-xl hover:bg-slate-700 transition"
-            >
-              Use Tool
-            </a>
-          </div>
-        ))}
-      </div>
-    </div>
-  );
-}
-
     
     <section class="tools-section" id="tools">
         <div class="container">
@@ -663,6 +617,7 @@
                 <p>Edit, convert and optimize your images with professional tools</p>
             </div>
             <div class="tools-grid">
+                <div class="tool-card ecommerce-card"> <div class="tool-icon-container"> <i class="fas fa-tags"></i></div><h3>E-commerce Label Crop</h3><p>Automatically crop product labels, barcodes, tags & packaging images</p><div class="tool-features"><span>PDF</span></div><a href="#" class="tool-button">Crop Label</a></div>
                 <div class="tool-card"><div class="tool-icon-container"><i class="fas fa-exchange-alt"></i></div><h3>Image Converter</h3><p>Convert between JPG, PNG, GIF, WEBP and more</p><a href="image-converter.html" class="tool-button">Use Tool</a></div>
                 <div class="tool-card"><div class="tool-icon-container"><i class="fas fa-compress-alt"></i></div><h3>Image Compressor</h3><p>Reduce file size without losing quality</p><a href="Image-compressor.html" class="tool-button">Use Tool</a></div>
                 <div class="tool-card"><div class="tool-icon-container"><i class="fas fa-expand-alt"></i></div><h3>Image Resizer</h3><p>Resize images to exact dimensions</p><a href="Image-Resizer.html" class="tool-button">Use Tool</a></div>
